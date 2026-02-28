@@ -8,10 +8,12 @@ permissions:
   pull-requests: write
 jobs:
   build:
-    name: build stage one
+    name: build one
     runs-on: ubuntu-latest
 
     steps:
+      - name: print event trigger
+        run: echo ${{ github.event_name }}
       - name: step one  
         uses: actions/checkout@v4
 
